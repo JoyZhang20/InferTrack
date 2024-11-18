@@ -102,7 +102,6 @@ if __name__ == '__main__':
     coco = COCO(ann_file)
     imgIds = sorted(coco.getImgIds())
     imgIds.insert(0, 139)  # 在正式测试前插入一个图像用于预热程序，避免第一次装载模型等造成的冷启动时间
-    imgIds=imgIds[1:3]
     infer_time_list = coco_ins_seg(imgIds)  # 执行所有任务的推理，保存推理结果，返回推理时间
     coco_eval(coco)  # 在推理完所有图像后统一计算精度
 
