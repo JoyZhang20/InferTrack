@@ -54,7 +54,7 @@ def coco_ins_seg(imgIds, model_size):
     data_size_list = []  # 存储图像大小
     infer_time_list = []
     results = []
-    model = YOLO('model/yolov8' + model_size + '.pt')
+    model = YOLO('yolov8' + model_size + '.pt')
     for img_id in tqdm(imgIds):
         img_info = coco.loadImgs(img_id)[0]
         img_path = f'{data_dir}/{img_info["file_name"]}'
