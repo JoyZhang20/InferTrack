@@ -1,0 +1,2 @@
+id	data_size	infer_time	accuracy	
+285	327.989	0.25	1.0	
